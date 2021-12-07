@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "tsc",
-    "prebuild": "rimraf lib",
+    "prebuild": "rimraf dist",
     "test": "jest",
     "test:cov": "jest --coverage",
     "lint": "npx eslint"

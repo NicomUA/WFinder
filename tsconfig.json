@@ -12,5 +12,5 @@
     "noImplicitAny": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "resource"]
+  "exclude": ["node_modules", "dist", "resource", "src/__test__"]
 }
