@@ -10,8 +10,8 @@ export class Bitmap {
     if (columns <= 0 || rows <= 0) {
       throw new FinderError('Bitmap size should be at least 1:1');
     }
-
     this.data = inputData || Utils.createMatrix(columns, rows);
+    // find all white pixels if input data provided to avoid search in future
     this.whitePixels = inputData ? this.findAllWhite() : [];
   }
 
@@ -37,7 +37,8 @@ export class Bitmap {
     }
     let minDistance = Infinity;
     let closesPixel = startPosition;
-
+    // to avoid lot of memory usage and speed just find shortest distance from all founded white pixel
+    // is can be implements using BFS or DFS graph algorithm is cases most of bitmap will be white pixel
     for (const whitePixel of this.whitePixels) {
       const currentDistance = this.calculateDistance(startPosition, whitePixel);
       if (currentDistance < minDistance) {

@@ -74,6 +74,8 @@ export class Utils {
    * @static
    */
   static readInput(): string {
+    // 0 is standard POSIX stdin device
+    // same sa process.stdin.fd
     return fs.readFileSync(0, 'utf-8');
   }
   /**
