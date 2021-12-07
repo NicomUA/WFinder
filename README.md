@@ -35,10 +35,25 @@ or
 ```bash
 $ node ./dist/index.js
 ```
-Input all data(past or type) and CMD/CTRL+D
+Input all data(past or type) and press CMD/CTRL+D
 
-To run source version:
+## Run TS(source version)
+
 ```bash
 $ npm install -g ts-node
+```
+
+```bash
 $ ts-node ./src/index.ts < <input_file>
 ```
+
+Example:
+
+```bash
+$ ts-node ./src/index.ts < ./resources/example_input
+```
+or 
+```bash
+$ ts-node ./src/index.ts
+```
+Input all data(past or type) and press CMD/CTRL+D
